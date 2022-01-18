@@ -1,1 +1,17 @@
+# pre-trained st model
+
+2022-01-11 12:04:51,363 - INFO - joeynmt.training - Training ended after 100 epochs.
+2022-01-11 12:04:51,363 - INFO - joeynmt.training - Best validation result (greedy) at step   305000:   2.29 eval_metric.
+2022-01-11 12:04:51,392 - INFO - joeynmt.prediction - Process device: cuda, n_gpu: 2, batch_size per device: 4
+2022-01-11 12:04:51,392 - INFO - joeynmt.prediction - EvaluationTokenizer(level='word', lowercase=True, remove_punctuation=True, tokenizer='Tokenizer13a')
+2022-01-11 12:04:51,392 - INFO - joeynmt.model - Building an encoder-decoder model...
+2022-01-11 12:04:51,920 - INFO - joeynmt.model - Enc-dec model built.
+2022-01-11 12:05:38,454 - INFO - joeynmt.helpers - Load model from /home/students/lyu/model/st-23/305000.ckpt.
+2022-01-11 12:05:38,519 - INFO - joeynmt.prediction - Loading model_state from /home/students/lyu/model/st-23/305000.ckpt.
+2022-01-11 12:05:38,559 - INFO - joeynmt.prediction - Decoding on dev set (/home/students/lyu/model/BSTC/zh-CN/dev.tsv)...
+2022-01-11 12:08:15,955 - INFO - joeynmt.prediction - dev  bleu[13a] :   1.17, wer[13a] : 102.74 (Beam search decoding with beam size = 20 and alpha = 1.0)
+2022-01-11 12:08:15,960 - INFO - joeynmt.prediction - Translations saved to: /home/students/lyu/model/st-23/00305000.hyps.dev.
+2022-01-11 12:08:15,960 - INFO - joeynmt.prediction - Decoding on test set (/home/students/lyu/model/BSTC/zh-CN/test.tsv)...
+2022-01-11 12:09:50,878 - INFO - joeynmt.prediction - test bleu[13a] :   1.07, wer[13a] : 102.36 (Beam search decoding with beam size = 20 and alpha = 1.0)
+2022-01-11 12:09:50,882 - INFO - joeynmt.prediction - Translations saved to: /home/students/lyu/model/st-23/00305000.hyps.test.
 
