@@ -1,1 +1,27 @@
+# baseline model
+
+(py39) lyu@node37:~/model$ python -m joeynmt test st-34.yaml
+2022-01-18 20:26:11,452 - INFO - root - Hello! This is Joey-NMT (version 1.4).
+2022-01-18 20:26:11,453 - INFO - joeynmt.data - SpecAugment(freq_mask_n=1, freq_mask_f=18, time_mask_n=1, time_mask_t=40, time_mask_p=1.0)
+2022-01-18 20:26:11,453 - INFO - joeynmt.data - CMVN(norm_means=True, norm_vars=True, before=True)
+2022-01-18 20:26:11,453 - INFO - joeynmt.data - Loading tokenizer...
+2022-01-18 20:26:11,514 - INFO - joeynmt.tokenizers - Trg tokenizer: SentencePieceTokenizer(level='bpe', lowercase=True, remove_punctuation=True, tokenizer='SentencePieceProcessor')
+2022-01-18 20:26:11,514 - INFO - joeynmt.data - Building vocabulary...
+2022-01-18 20:26:11,931 - INFO - joeynmt.data - Loading dev data...
+2022-01-18 20:26:11,942 - INFO - joeynmt.data - Loading test data...
+2022-01-18 20:26:11,957 - INFO - joeynmt.data - Data loaded.
+2022-01-18 20:26:11,958 - INFO - joeynmt.helpers - Train dataset: None
+2022-01-18 20:26:11,958 - INFO - joeynmt.helpers - Valid dataset: TsvDataset(task=s2t, len(src)=49, len(trg)=49, is_train=False, random_subset=-1, filter_src_length=(-1,-1), filter_trg_length=(-1,-1), specaugment=False, cmvn=True)
+2022-01-18 20:26:11,958 - INFO - joeynmt.helpers -  Test dataset: TsvDataset(task=s2t, len(src)=53, len(trg)=53, is_train=False, random_subset=-1, filter_src_length=(-1,-1), filter_trg_length=(-1,-1), specaugment=False, cmvn=True)
+2022-01-18 20:26:11,958 - INFO - joeynmt.helpers - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) , (5) ▁the (6) . (7) ▁to (8) ▁of (9) ▁and
+2022-01-18 20:26:11,958 - INFO - joeynmt.helpers - Number of unique Trg tokens (vocab_size): 4927
+2022-01-18 20:26:11,959 - INFO - joeynmt.prediction - Process device: cpu, n_gpu: 0, batch_size per device: 5
+2022-01-18 20:26:11,960 - INFO - joeynmt.model - Building an encoder-decoder model...
+2022-01-18 20:26:13,293 - INFO - joeynmt.model - Enc-dec model built.
+2022-01-18 20:26:18,921 - INFO - joeynmt.helpers - Load model from /home/students/lyu/model/st-23/305000.ckpt.
+2022-01-18 20:26:18,952 - INFO - joeynmt.prediction - Loading model_state from /home/students/lyu/model/st-23/305000.ckpt.
+2022-01-18 20:26:18,952 - INFO - joeynmt.prediction - Decoding on dev set (/home/students/lyu/model/Dialect/zh-CN/dev.tsv)...
+2022-01-18 20:40:13,285 - INFO - joeynmt.prediction - dev  bleu[intl] :   0.01 (Beam search decoding with beam size = 10 and alpha = 1.0)
+2022-01-18 20:40:13,286 - INFO - joeynmt.prediction - Decoding on test set (/home/students/lyu/model/Dialect/zh-CN/test.tsv)...
+2022-01-18 20:59:29,860 - INFO - joeynmt.prediction - test bleu[intl] :   0.00 (Beam search decoding with beam size = 10 and alpha = 1.0)
 
