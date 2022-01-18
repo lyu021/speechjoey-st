@@ -1,1 +1,16 @@
+# fine-tuned model
+
+2022-01-11 19:25:06,178 - INFO - joeynmt.training - Training ended after   3 epochs.
+2022-01-11 19:25:06,178 - INFO - joeynmt.training - Best validation result (greedy) at step      300:   0.40 eval_metric.
+2022-01-11 19:25:06,208 - INFO - joeynmt.prediction - Process device: cuda, n_gpu: 2, batch_size per device: 2
+2022-01-11 19:25:06,208 - INFO - joeynmt.model - Building an encoder-decoder model...
+2022-01-11 19:25:06,644 - INFO - joeynmt.model - Enc-dec model built.
+2022-01-11 19:25:40,712 - INFO - joeynmt.helpers - Load model from /home/students/lyu/model/st-34/300.ckpt.
+2022-01-11 19:25:40,796 - INFO - joeynmt.prediction - Loading model_state from /home/students/lyu/model/st-34/300.ckpt.
+2022-01-11 19:25:40,848 - INFO - joeynmt.prediction - Decoding on dev set (/home/students/lyu/model/Dialect/zh-CN/dev.tsv)...
+2022-01-11 19:26:12,545 - INFO - joeynmt.prediction - dev  bleu[intl] :   0.44 (Beam search decoding with beam size = 10 and alpha = 1.0)
+2022-01-11 19:26:12,579 - INFO - joeynmt.prediction - Translations saved to: /home/students/lyu/model/st-34/00000300.hyps.dev.
+2022-01-11 19:26:12,579 - INFO - joeynmt.prediction - Decoding on test set (/home/students/lyu/model/Dialect/zh-CN/test.tsv)...
+2022-01-11 19:26:55,641 - INFO - joeynmt.prediction - test bleu[intl] :   0.32 (Beam search decoding with beam size = 10 and alpha = 1.0)
+2022-01-11 19:26:55,643 - INFO - joeynmt.prediction - Translations saved to: /home/students/lyu/model/st-34/00000300.hyps.test.
 
